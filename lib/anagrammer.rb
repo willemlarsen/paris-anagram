@@ -1,3 +1,3 @@
 def anagrams(word)
-  ["a"]
+  [word]
 end
