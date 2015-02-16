@@ -1,3 +1,5 @@
+require("anagrammer")
+
 describe "an anagrammer" do
   it "should return a list of just one anagram when input word is one char long" do
     word = "a"
