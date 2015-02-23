@@ -1,5 +1,5 @@
 def remove_char(char, string)
-  "b"
+  string.slice(1, string.length - 1)
 end
 
 def anagrams(word)

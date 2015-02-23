@@ -14,5 +14,6 @@ end
 
 describe "a char remover" do
   it "can remove the first char of any string" do
+    expect(remove_char("a", "abc")).to eq("bc")
   end
 end
