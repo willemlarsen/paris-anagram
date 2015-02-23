@@ -11,3 +11,8 @@ describe "an anagrammer" do
     expect(anagrams(word)).to eq(["ab", "ba"])
   end
 end
+
+describe "a char remover" do
+  it "can remove the first char of any string" do
+  end
+end
