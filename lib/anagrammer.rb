@@ -4,6 +4,7 @@ end
 
 def anagrams(word)
   return [word] if word.length == 1
-  a_removed = remove_nth_char(0, word)
-  ["a" + a_removed, "ba"]
+  first = word[0] + remove_nth_char(0, word)
+  second = word[1] + remove_nth_char(1, word)
+  [first, second]
 end
