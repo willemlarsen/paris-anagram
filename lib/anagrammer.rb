@@ -7,10 +7,10 @@ def anagrams(word)
   (0...word.length).map do |i|
     char = word[i]
     sub_word = remove_nth_char(i, word)
-    distribute_char_over_sub_anagrams(char, sub_word)
+    distribute_char_over_sub_anagrams(char, [sub_word])
   end
 end
 
 def distribute_char_over_sub_anagrams(char, sub_anagrams)
-  char + sub_anagrams
+  char + sub_anagrams[0]
 end
