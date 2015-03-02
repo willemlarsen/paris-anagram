@@ -5,6 +5,12 @@ end
 def anagrams(word)
   return [word] if word.length == 1
   (0...word.length).map do |i|
-    word[i] + remove_nth_char(i, word)
+    char = word[i]
+    sub_word = remove_nth_char(i, word)
+    distribute_char_over_sub_anagrams(char, sub_word)
   end
+end
+
+def distribute_char_over_sub_anagrams(char, sub_anagrams)
+  char + sub_anagrams
 end
