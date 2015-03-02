@@ -21,3 +21,10 @@ describe "a char remover" do
     expect(remove_nth_char(1, "abc")).to eq("ac")
   end
 end
+
+describe "distribute char over a list of strings" do
+  it "means this char is inserted at beginning of each string" do
+    distributed = distribute_char_over_sub_anagrams("a", ["bc", "de"])
+    expect(distributed).to eq(["abc", "ade"])
+  end
+end
