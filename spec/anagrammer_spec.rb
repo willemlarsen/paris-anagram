@@ -16,4 +16,8 @@ describe "a char remover" do
   it "can remove the first char of any string" do
     expect(remove_nth_char(0, "abc")).to eq("bc")
   end
+
+  it "can remove the second char of any string" do
+    expect(remove_nth_char(1, "abc")).to eq("ac")
+  end
 end

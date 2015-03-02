@@ -1,5 +1,5 @@
 def remove_nth_char(position, string)
-  string.slice(1, string.length - 1)
+  string.slice(0, position) + string.slice(position + 1, string.length - 1 - position)
 end
 
 def anagrams(word)
