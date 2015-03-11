@@ -10,6 +10,12 @@ describe "an anagrammer" do
     word = "ab"
     expect(anagrams(word)).to eq(["ab", "ba"])
   end
+
+  it "should return a list of six anagrams when input word is made of three different chars" do
+    word = "abc"
+    expected_result = ["abc", "acb", "bac", "bca", "cab", "cba"]
+    expect(anagrams(word)).to eq(expected_result)
+  end
 end
 
 describe "a char remover" do
