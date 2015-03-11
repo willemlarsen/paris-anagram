@@ -16,6 +16,15 @@ describe "an anagrammer" do
     expected_result = ["abc", "acb", "bac", "bca", "cab", "cba"]
     expect(anagrams(word)).to eq(expected_result)
   end
+
+  it "should return all anagrams of a longer word" do
+    word = "abcd"
+    expected_result = ["abcd", "abdc", "acbd", "acdb", "adbc", "adcb",
+	    	       "bacd", "badc", "bcad", "bcda", "bdac", "bdca",
+		       "cabd", "cadb", "cbad", "cbda", "cdab", "cdba",
+		       "dabc", "dacb", "dbac", "dbca", "dcab", "dcba"]
+    expect(anagrams(word)).to eq(expected_result)
+  end
 end
 
 describe "a char remover" do
