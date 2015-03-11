@@ -8,9 +8,11 @@ def anagrams(word)
     char = word[i]
     sub_word = remove_nth_char(i, word)
     distribute_char_over_sub_anagrams(char, [sub_word])
-  end
+  end.flatten
 end
 
 def distribute_char_over_sub_anagrams(char, sub_anagrams)
-  char + sub_anagrams[0]
+  sub_anagrams.map do |sub_anagram|
+    char + sub_anagram
+  end
 end
