@@ -8,7 +8,7 @@ def anagrams(word)
     char = word[i]
     sub_word = remove_nth_char(i, word)
     distribute_char_over_sub_anagrams(char, anagrams(sub_word))
-  end.flatten
+  end.flatten.uniq
 end
 
 def distribute_char_over_sub_anagrams(char, sub_anagrams)

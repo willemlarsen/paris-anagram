@@ -25,6 +25,12 @@ describe "an anagrammer" do
 		       "dabc", "dacb", "dbac", "dbca", "dcab", "dcba"]
     expect(anagrams(word)).to eq(expected_result)
   end
+
+  it "should remove duplicates" do
+    word = "abb"
+    expected_result = ["abb", "bab", "bba"]
+    expect(anagrams(word)).to eq(expected_result)
+  end
 end
 
 describe "a char remover" do
