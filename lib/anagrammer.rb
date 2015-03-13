@@ -1,10 +1,10 @@
 def anagrams(word)
   return [word] if word.length == 1
-  (0...word.length).map do |i|
+  (0...word.length).flat_map do |i|
     char = word[i]
     sub_word = remove_nth_char(i, word)
     distribute_char_over_sub_anagrams(char, anagrams(sub_word))
-  end.flatten.uniq
+  end.uniq
 end
 
 def remove_nth_char(position, string)
